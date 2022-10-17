@@ -1,0 +1,22 @@
+name: Build and Publish Paper
+on: [push, pull_request]
+jobs:
+  CompileAndPublishLaTeXPaper:
+    runs-on: ubuntu-latest
+    steps:      
+      - uses: actions/checkout@v2
+      - name: Setup TeXLive          
+        run: |
+          sudo apt-get -y install texlive-latex-recommended texlive-pictures texlive-latex-extra
+      - name: Compile Paper to PDF and Publish
+        run: |
+          sudo pdflatex main.tex          
+          sudo pdflatex main.tex
+      - name: Publish Latest PDF to Repo
+        if: success() || failure()
+        run: |
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add .
+          git commit -m "Compiled and updated paper ${{ github.sha }}"
+          git push
