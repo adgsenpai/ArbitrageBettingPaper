@@ -13,7 +13,7 @@ I wrote the odds in a form $O{oddtype,matrixentrynumber}$ in the matrix\\
         O_{1,1} & O_{2,3} & O_{3,5} & \dots & O_{4,7} \\
         O_{1,2} & O_{2,4} & O_{3,6} & \dots & O_{4,8} \\
         \vdots & \vdots & \vdots & \ddots & \vdots \\
-        O_{1,n} & O_{2,n+1} & O_{3,n+2} & \dots & O_{4,n+3} \\
+        O_{1,k} & O_{2,k+1} & O_{3,k+2} & \dots & O_{4,k+3} \\
     \end{bmatrix}
 \end{equation}
 
@@ -22,7 +22,7 @@ We then find the most optimized arbitrage bet by finding the maximum value for e
 Resulting in a matrix of $O_{n}$ odds for the same match $M_{n}$
 
 \begin{equation}
-    Opt_{n} = \begin{bmatrix}
+    Opt_{M_{n}} = \begin{bmatrix}
         B_{x} & B_{y} & B_{z} & \dots & B_{p} \\
         O_{1,maxentry} & O_{2,maxentry} & O_{3,maxentry} & \dots & O_{n,maxentry} \\
     \end{bmatrix}
