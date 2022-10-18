@@ -1,0 +1,35 @@
+\section{Finding the most Optimized Arbitrage Bet}
+
+We have learnt how to find arbitrage bets in the previous section. Now we will learn how to find the most optimized arbitrage bet. This is done by finding the most optimized arbitrage bet in the following way:
+
+We look at $n$ amount of bookmakers $B_{}$. We formulate a matrix of $O_{n}$ odds for the same match $M_{n}$
+
+\begin{equation}
+    M_{n} = \begin{bmatrix}
+        B_{1} & B_{2} & B_{3} & \dots & B_{n} \\
+        O_{1} & O_{1} & O_{1} & \dots & O_{1} \\
+        O_{2} & O_{2} & O_{2} & \dots & O_{2} \\
+        \vdots & \vdots & \vdots & \ddots & \vdots \\
+        O_{n} & O_{2} & O_{3} & \dots & O_{n} \\
+    \end{bmatrix}
+\end{equation}
+
+We then find the most optimized arbitrage bet by finding the maximum value for each row in the matrix $M_{n}$
+
+Resulting in a matrix of $O_{n}$ odds for the same match $M_{n}$
+
+\begin{equation}
+    Opt_{n} = \begin{bmatrix}
+        B_{x} & B_{y} & B_{z} & \dots & B_{p} \\
+        O_{1} & O_{2} & O_{3} & \dots & O_{n} \\
+    \end{bmatrix}
+\end{equation}
+
+Where $B_{var}$ is the bookmaker with the highest odds for the match $M_{n}$
+
+In theory the more bookmakers we have the more optimized our arbitrage bet will be. The more optimized bet results in yielding a higher profit for the arbitrage bet.\\
+
+But always remember for it to be an arbitrage bet the $A_{n}$ must be less than $1$.
+
+
+

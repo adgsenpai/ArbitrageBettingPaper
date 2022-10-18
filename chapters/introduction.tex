@@ -171,10 +171,12 @@ In order to do Arbitrage Betting we need to find a set of odds that will allow u
 
 \textbf{Assumption:} \\
 
-Let us generate 3 superficial game odds with 3 outcomes that can occur in a game. \\
+Let us generate 3 superficial game odds with 3 outcomes that can occur in a game. In the matrix we may say that all the odds computed are from the same bookmaker. \\
 
 The odds are as follows: \\
 
+\begin{table}
+\centering
 \begin{tabular}{|c|c|c|c|}
 \hline
 \textit{$M_{n}$} & \textit{$O_1$} & \textit{$O_2$} & \textit{$O_3$} \\
@@ -185,9 +187,139 @@ The odds are as follows: \\
 \hline
 \text{$M_{3}$} & 1.6 & 12 & 0.5 \\
 \hline
-\end{tabular} \\
+\end{tabular}
+\caption{Table of Odds}
+\end{table}
 
 Where $M_{n}$ is the match number, $O_1$ is the odds of the first outcome, $O_2$ is the odds of the second outcome and $O_3$ is the odds of the third outcome. \\
+
+\textbf{How do we recognise Arbitrage Betting opportunities?} \\
+
+Let us denote $A_{n}$ as the arbitrage probability of the $M_{n}$. \\
+
+If the the sum of the $A_{n}$ is $<$ 1 then we have an Arbitrage Betting opportunity. \\
+
+We can calculate the probability of the $M_{n}$ as follows: \\
+
+\begin{equation}
+\begin{array}{l}
+    A_{n} = \sum_{O_{n} = 1}^{N_{O}} \frac{1}{O_{n}} \\
+\end{array}
+\end{equation}
+
+Where $N_{O}$ is the number of odds in the match and $O_{n}$ is the current odds in the loop of the sum. \\
+ 
+\textbf{Example: Calculating the opportunity of a match} \\
+
+Let us calculate the arbitrage probability of the first match $M_{1}$. \\
+
+\begin{math}
+\begin{array}{l}
+    A_{1} = \sum_{O_{1} = 1}^{N_{O}} \frac{1}{O_{1}} \\
+
+    A_{1} = \frac{1}{1.5} + \frac{1}{3.5} + \frac{1}{5} \\
+
+    A_{1} = 1,15238095 
+\end{array}
+\end{math}
+
+As we can see in $A_{1}$ we do not have an Arbitrage Betting opportunity. \\
+
+Solving for the other matches we get the following: \\
+
+\begin{math}
+\begin{array}{l}
+    A_{2} = 0.97777778 \\
+    A_{3} = 2,70833333 \\
+\end{array}
+\end{math}
+
+As we can see in $A_{2}$ we have an Arbitrage Betting opportunity. \\
+
+Since we now found an opportunity let us get to work on computing our profit for $A_{2}$. \\
+
+\textbf{Example: Calculating the Arbitrage Statistics for $A_{2}$} \\
+
+Let us calculate the arbitrage statistics for the second match $M_{2}$. \\
+
+Given $A_{2}$ = 0.97777778 \\ 
+
+Since we have an Arbitrage Betting opportunity we can calculate the following: \\
+
+\begin{equation}
+    Profit = (Investment / ArbitragePercentage) - Investment
+\end{equation}
+
+Where $Investment$ is the amount of money that we are going to invest in the match. \\
+
+Let us say that we are going to invest R100 in the match. \\
+
+\begin{math}
+\begin{array}{l}
+    Profit = (R100 / 0.97777778) - R100 \\
+    Profit = R2.27
+\end{array}
+\end{math}
+
+As we can see we are going to make a profit of R2.27. With zero risk. We bet on all the outcomes and we are guaranteed to make a profit. \\
+
+Now we need to find the stake for each outcome. \\
+We can calculate the stake for each outcome as follows: \\
+\begin{equation}
+    \begin{split}
+    Individual bets = (Investment \times IndividualArbitragePercentage) / TotalArbitragePercentage \\
+    S_{n} = \frac{I \times A_{current}}{A_{total}}
+    \end{split}
+\end{equation}
+
+Where $S_{n}$ is the stake for the $M_{n}$ at $O_{n}$ odds, $I$ is the investment, $A_{current}$ is the arbitrage percentage of the current $O_{n}$ odd and $A_{total}$ is the total arbitrage percentage of $M_{n}$. \\
+
+Let us compute the stake for all the outcomes of $M_{2}$. \\
+
+\begin{math}
+\begin{array}{l}
+    S_{1} = \frac{R100 \times \frac{1}{2}}{0.97777778} \\
+    S_{1} = R51.14 \\
+    S_{2} = \frac{R100 \times \frac{1}{3.6}}{0.97777778} \\
+    S_{2} = R38.41 \\
+    S_{3} = \frac{R100 \times \frac{1}{5}}{0.97777778} \\
+    S_{3} = R20.45
+\end{array}
+\end{math}
+
+As we can see we are going to bet R51.14 on the first outcome, R38.41 on the second outcome and R20.45 on the third outcome. \\
+
+To get a guaranteed profit of R2.27
+
+Our return on investment is as follows: \\
+\begin{equation}
+    ROI = \frac{Profit}{Investment} \times 100
+\end{equation}
+
+\begin{math}
+\begin{array}{l}
+    ROI = \frac{R2.27}{R100} \times 100 \\
+    ROI = 2.27\%
+\end{array}
+\end{math} \\
+
+Now that your are aware of the concept of Arbitrage Betting, In the real world you get $O_{n}$ outcomes and $M_{n}$ matches. \\ The odds are never given like that in the real world by the bookies they are always one step ahead of us. \\ But i am going to show you how to get the odds in the real world and introduce your to Arbitrage Betting in different bookmakers at once. \\
+You can start looking for opportunities with this current knowledge but further in this paper we will look at how to automate the process of finding Arbitrage Betting opportunities. Talk about issues with the current solutions and how we can improve on them. \\ 
+Hope your enjoyed my introduction to Arbitrage Betting. \\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
