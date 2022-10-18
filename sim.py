@@ -9,9 +9,9 @@ Droi = []
 
 # get random values from 1%-3% 
 def get_random_roi():
-    return 0.01
+    return random.uniform(0.01, 0.03)
 
-for d in range(1, 365*3):
+for d in range(1, 365):
     Dt = d
     ROI = get_random_roi()
     I = I + (I * ROI)
