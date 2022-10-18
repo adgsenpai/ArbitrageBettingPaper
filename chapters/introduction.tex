@@ -1,11 +1,205 @@
-%add subsections like this
-\subsection{Hello World}
-This is a template to get started in writing papers or scientific reports.
+\section{Introduction to Arbitrage Betting}
+Betting arbitrage ("sure bets", sports arbitrage) is an example of arbitrage arising on betting markets due to either bookmakers' differing opinions on event outcomes or errors. When conditions allow, by placing one bet per each outcome with different betting companies, the bettor can make a profit regardless of the outcome. Mathematically, arbitrage occurs when there are a set of odds, which represent all mutually exclusive outcomes that cover all state space possibilities (i.e. all outcomes) of an event, whose implied probabilities add up to less than 1. In the bettors' slang an arbitrage is often referred to as an arb; people who take advantage of these arbitrage opportunities are called arbers.
 
-%insert figure
-\begin{figure}[htb]
-\centering
-\includegraphics[width=0.8\textwidth]{latexlogo.png}
-\caption{LaTeX Logo}
-\label{fig:latex_logo}
-\end{figure}
+\subsection{Theory of Arbitrage Betting}
+
+Consider the variables for a soccer betting market as follows:
+Let us suggest that there are there events in a soccer match. \\
+
+\begin{math}
+\begin{array}{l}
+\text{P}(\text{Home Team Wins}) = p_{1} \\
+\text{P}(\text{Draw}) = p_{2} \\
+\text{P}(\text{Away Team Wins}) = p_{3} \\
+\\
+\end{array}
+\end{math}
+
+When betting a match a \textit{bookmaker} will offer odds for each of the three possible outcomes. \\
+
+Some examples of odds are as follows: \\
+
+\begin{math}
+\begin{array}{l}
+\text{Odds}(\text{Home Team Wins}) = o_{1} \\
+\text{Odds}(\text{Draw}) = o_{2} \\
+\text{Odds}(\text{Away Team Wins}) = o_{3} \\
+\\
+\end{array}
+\end{math}
+
+The purpose of Arbitrage Betting is to find a set of odds that will allow us to make a profit regardless of the outcome of the match. \\
+
+Before we can do this we need to understand the relationship between odds and probabilities. I will explain below how betting odds work. \\
+
+\subsubsection{Learning to Bet}
+
+\textbf{Bet Amount/Punt Amount} When betting on a match you will be asked to place a bet amount. \\
+\textbf{Odds} are the ratio of the amount of money that you will win to the amount of money that you bet. \\
+\textbf{Probability} is the likelihood of an event occurring. \\
+\textbf{Profit} is the amount of money that you will win. \\
+\textbf{Return} is the amount of money that you will win plus the amount of money that you bet. \\
+
+\textbf{Example: There is a soccer match between Manchester United vs Everton.} \\
+
+The odds for Manchester United to win are 1.5. \\
+The odds for a draw are 3.5. \\
+The odds for Everton to win are 5. \\
+
+Now the ratio of the amount of money that you will win to the amount of money that you bet is as follows: \\
+
+\textbf{Manchester United to win} = 1.5 \\
+\textbf{Draw} = 3.5 \\
+\textbf{Everton to win} = 5 \\
+
+You may be wondering how the odds are calculated. \\
+
+The bookmaker will calculate the odds based on the probability of the event occurring. 
+For interest sake Manchester United compared to Everton, Manchester United is the favourite to win. Everton is the underdog. 
+The bookmaker will calculate the odds based on the probability of the event occurring. 
+The bookmaker will calculate the probability of the event occurring by looking at the history of the teams. There are many factors that the bookmaker will take into account. 
+Different bookmakers will have different odds for the same match. This is where we will take advantage later in our paper to do Arbitrage Betting. \\
+
+Lets take a bet for Manchester United to win. \\
+
+\textbf{Bet Amount} = R100 \\
+\textbf{P(Manchester United to win)} = 1.5 \\
+
+Our profit is calculated as follows: \\
+
+\begin{math}
+\begin{array}{l}
+\text{Profit} = (\text{Bet Amount} \times \text{P(Manchester United to win)}) - \text{Bet Amount} \\
+\text{Profit} = (R100 \times 1.5) - R100 \\
+\text{Profit} = R50 \\
+\\
+\end{array}
+\end{math}
+
+\begin{math}
+\begin{array}{l}
+\text{Return} = \text{Bet Amount} + \text{Profit} \\
+\text{Return} = R100 + R50 \\
+\text{Return} = R150 \\
+\\
+\end{array}
+\end{math}
+
+As you can see we have made a profit of R50. \\
+If we bet R100 on Manchester United to win we will win R150. \\
+
+But what happens if Everton wins? \\
+We will have a loss of R100. \\
+
+Even a draw will result in a loss of R100. \\
+
+This is why we need to find a set of odds that will allow us to make a profit regardless of the outcome of the match. This is when we will use Arbitrage Betting. \\
+
+\subsubsection{Betting on all the Outcomes}
+
+As we have seen above, we can make a profit by betting on Manchester United to win. \\
+
+Let us see what happens if we bet on all the outcomes. \\
+We will bet R100 on Manchester United to win, R100 on a draw and R100 on Everton to win in total our investment is R300. \\
+
+Case 1: Manchester United wins. \\
+
+\begin{math}
+\begin{array}{l}
+\text{Winning} = \text{Bet Amount} \times \text{P(Manchester United to win)} \\
+\text{Winning} = R100 \times 1.5 \\
+\text{Winning} = R150 \\
+
+\text{Return} = \text{Bet Amount} + \text{Winning} \\
+\text{Return} = R100 + R150 \\
+\text{Return} = R250 \\
+
+\text{Profit/Loss} = \text{Return} - \text{TotalInvestment} \\
+\text{Profit/Loss} = R250 - R300 \\
+\text{Loss} = -R50 \\
+\\
+\end{array}
+\end{math}
+
+Case 2: Draw. \\
+
+\begin{math}
+\begin{array}{l}
+\text{Winning} = \text{Bet Amount} \times \text{P(Draw)} \\
+\text{Winning} = R100 \times 3.5 \\
+\text{Winning} = R350 \\
+\\
+\text{Return} = \text{Bet Amount} + \text{Winning} \\
+\text{Return} = R100 + R350 \\
+\text{Return} = R450 \\
+\\
+\text{Profit/Loss} = \text{Return} - \text{TotalInvestment} \\
+\text{Profit/Loss} = R450 - R300 \\
+\text{Profit} = R150 \\
+\\
+\end{array}
+\end{math}
+
+Case 3: Everton wins. \\
+
+\begin{math}
+\begin{array}{l}
+\text{Winning} = \text{Bet Amount} \times \text{P(Everton to win)} \\
+\text{Winning} = R100 \times 5 \\
+\text{Winning} = R500 \\
+\\
+\text{Return} = \text{Bet Amount} + \text{Winning} \\
+\text{Return} = R100 + R500 \\
+\text{Return} = R600 \\
+\\
+\text{Profit/Loss} = \text{Return} - \text{TotalInvestment} \\
+\text{Profit/Loss} = R600 - R300 \\
+\text{Profit} = R300 \\
+\\
+\end{array}
+\end{math}
+
+As we can see by doing this there is times where we will make a profit and times where we will make a loss. In reality the odds wont be exactly the same as the ones that we have used in our example. It is more dangerous to bet on all the outcomes because the odds will be different. \\
+There is still risk involved in betting on all the outcomes. \\
+But now i will introduce you to Arbitrage Betting where we will make guaranteed profits. \\
+
+\subsubsection{Mathematics of Arbitrage Betting}
+
+\textbf{Arbitrage Betting} is a betting strategy that allows us to make a profit regardless of the outcome of the match. \\
+
+In order to do Arbitrage Betting we need to find a set of odds that will allow us to make a profit regardless of the outcome of the match. \\
+
+\textbf{Assumption:} \\
+
+Let us generate 3 superficial game odds with 3 outcomes that can occur in a game. \\
+
+The odds are as follows: \\
+
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textit{$M_{n}$} & \textit{$O_1$} & \textit{$O_2$} & \textit{$O_3$} \\
+\hline
+\text{$M_{1}$} & 1.5 & 3.5 & 5 \\
+\hline
+\text{$M_{2}$} & 2 & 3.6 & 5 \\
+\hline
+\text{$M_{3}$} & 1.6 & 12 & 0.5 \\
+\hline
+\end{tabular} \\
+
+Where $M_{n}$ is the match number, $O_1$ is the odds of the first outcome, $O_2$ is the odds of the second outcome and $O_3$ is the odds of the third outcome. \\
+
+
+
+ 
+
+
+
+    
+
+
+
+
+
+
+
